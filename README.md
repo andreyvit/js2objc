@@ -40,3 +40,8 @@ TODO:
 * convert Mocha tests into XCUnit tests
 
 See, everything is still a TODO. :-)
+
+
+## License
+
+MIT license.
