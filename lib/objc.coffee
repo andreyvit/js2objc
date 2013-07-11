@@ -8,6 +8,8 @@ typeDescriptors =
   TypeSuffix: 'suffix$ subtype'
   ObjcCall: 'receiver fragments:ObjcCallFragment[]'
   ObjcCallFragment: 'keyword$ value?'
+  ObjcVarArgList: 'values[]'
+  ReturnStatement: 'value'
   Identifier: 'name$'
   NumericLiteral: 'value$'
   StringLiteral: 'value$'
@@ -230,6 +232,7 @@ class ObjcContext
     @indentationString = (@indentationStrings[@indentationLevel] ?= String_repeat(@indentElement, @indentationLevel))
 
   output: ->
+    @_closeLine()
     @fragments.join('')
 
   _openLine: ->
@@ -306,7 +309,18 @@ generators =
     if node.value?
       @add(node.value)
 
+  ObjcVarArgList: (node) ->
+    for value, valueIndex in node.values
+      if valueIndex > 0
+        @add(',', SP_NEVER, SP_WANT)
+      @add(value)
+
   BinaryOperator: (node) ->
     @add(node.lhs)
     @add(node.op, SP_WANT, SP_WANT)
     @add(node.rhs)
+
+  ReturnStatement: (node) ->
+    @add('return')
+    @add(node.value)
+    @add(';', SP_NEVER, SP_WANT)
