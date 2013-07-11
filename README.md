@@ -2,7 +2,7 @@
 
 Some day, this is going to be a JavaScript to Objective-C transpiler.
 
-(It doesn't need to convert arbitrary complex JavaScript code, just something that allow to implement data structure manipulation and file I/O in Node.js and than transpile to Objective-C.)
+(It doesn't need to convert arbitrarily complex JavaScript code, just something that allows to implement data structure manipulation and file I/O in Node.js and than transpile to Objective-C.)
 
 Right now there's nothing to see here aside from very early beginnings. Basically this project idea kept bugging me, so I decided to write a bit of code to get it off my head.
 
