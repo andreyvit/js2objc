@@ -1,5 +1,7 @@
 # js2objc
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/andreyvit/js2objc.svg)](https://greenkeeper.io/)
+
 Some day, this is going to be a JavaScript to Objective-C transpiler.
 
 (It doesn't need to convert arbitrarily complex JavaScript code, just something that allows to implement data structure manipulation and file I/O in Node.js and than transpile to Objective-C.)
