@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "author": "Andrey Tarantsov <andrey@tarantsov.com>",
   "dependencies": {
-    "esprima": "~1.0.3",
-    "estraverse": "~1.1.2-1",
-    "escope": "0.0.14"
+    "esprima": "~4.0.1",
+    "estraverse": "~4.2.0",
+    "escope": "3.6.0"
   },
   "devDependencies": {
-    "coffee-script": "~1.6.3"
+    "coffee-script": "~1.12.7"
   }
 }
